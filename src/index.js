@@ -4,10 +4,13 @@
  * -LA CONSTANTE MONGOOSE Y SU USO EN ESTE ARCHIVO ES PARA EVITAR UN ERROR
  * POR EL USO OBSOLETO DE UNA FUNCIÓN EN MONGOOSE
  */
+
+
 import app from "./app";
 import exphbs from "express-handlebars";
 import "./database"
 const mongoose = require("mongoose");
+
 
 // const mongoose = mongoose()
 

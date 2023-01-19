@@ -6,7 +6,7 @@
 import { Router } from "express";
 import { restart } from "nodemon";
 import Task from "../models/Task";
-import { deleteTasks, renderTasks } from "../controllers/task.controllers"
+import { renderTasks } from "../controllers/task.controllers"
 import { creaateTasks } from "../controllers/task.controllers";
 import { renderTaskEdit } from "../controllers/task.controllers";
 import { editTasks } from "../controllers/task.controllers";
