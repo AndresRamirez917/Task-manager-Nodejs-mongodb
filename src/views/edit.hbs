@@ -1,0 +1,5 @@
+<form action="/edit/{{task._id}}" method="POST">
+    <input type="text" name="title" placeholder="Titulo tarea" value="{{task.title}}">
+    <textarea name="description" rows="3" placeholder="Agrega una descripción">{{task.description}}</textarea>
+    <button>Actualizar</button>
+</form>
