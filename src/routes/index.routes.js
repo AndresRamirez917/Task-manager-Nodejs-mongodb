@@ -18,10 +18,6 @@ router.get("/", renderTasks)
 
 router.post("/task/add", creaateTasks )
 
-router.get("/about", (req, res) =>{
-    res.render("about.hbs")
-})
-
 router.get("/edit/:id", renderTaskEdit)
 
 router.post("/edit/:id", editTasks)
@@ -29,5 +25,6 @@ router.post("/edit/:id", editTasks)
 router.get("/delete/:id", deleteTasks)
 
 router.get("/toogleDone/:id", taskToogleDone)
+
 
 export default router

@@ -1,4 +1,5 @@
-<table>
+{{#if tasks}}
+<table class="table table-bordered table-hover table-dark">
     <thead>
         <tr>
             <th>N.</th>
@@ -9,25 +10,30 @@
     </thead>
     <tbody>
         {{#each tasks}}
-    <tr>
-        <td>{{@index}}</td>
-        <td>{{title}}</td>
-        <td>{{description}}</td>
-        <td>
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>
 
-        {{#if done}}
-        <a href="/toogleDone/{{_id}}">Pendiente</a>
-            {{else}}
-        <a href="/toogleDone/{{_id}}">Hecho</a>
-        {{/if}}
-        
-       <a href="/delete/{{_id}}">Eliminar</a>
-       <a href="/edit/{{_id}}">Actualizar</a>
-        </td>
-    </tr>
-    {{/each}}
+                {{#if done}}
+                <a href="/toogleDone/{{_id}}" class="btn btn-primary btn-sm mt-2">Pendiente</a>
+                {{else}}
+                <a href="/toogleDone/{{_id}}" class="btn btn-success btn-sm mt-2">Hecho</a>
+                {{/if}}
+
+                <a href="/delete/{{_id}}" class="btn btn-danger btn-sm mt-2">Eliminar</a>
+                <a href="/edit/{{_id}}" class="btn btn-warning btn-sm mt-2">Actualizar</a>
+            </td>
+        </tr>
+        {{/each}}
     </tbody>
 </table>
-
-
-
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+        <h1>No hay tareas aún</h1>
+        <img src="/icons/icons8-calendario-94.png" alt="">
+    </div>
+</div>
+{{/if}}

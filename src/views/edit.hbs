@@ -1,5 +1,55 @@
-<form action="/edit/{{task._id}}" method="POST">
-    <input type="text" name="title" placeholder="Titulo tarea" value="{{task.title}}">
-    <textarea name="description" rows="3" placeholder="Agrega una descripción">{{task.description}}</textarea>
-    <button>Actualizar</button>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <div class=" p-4 rounded-0 bg-dark text-white col-md-5 offset-md-3">
+                    <form action="/edit/{{task._id}}" method="POST">
+                        <h3>Actualizar tarea</h3>
+                        <div>
+                            <label for="title">Título</label>
+                            <input value="{{task.title}}" type="text" name="title" placeholder="Título de la tarea"
+                                id="title" class="form-control rounded-0 bg-dark text-white">
+                        </div>
+                        <div>
+                            <label for="description">Descripción</label>
+                            <textarea type="text" name="description" placeholder="Descripción" id="description"
+                                class="form-control rounded-0 bg-dark text-white">{{task.description}}
+                            </textarea>
+                        </div>
+                        <button class="btn btn-primary btn-sm mt-2">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+   
+
+{{!-- <div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="mb-3">
+                <div class="card card-body p-4 rounded-0 bg-dark text-white rounded-0">
+                    <h3>Actualiza la tarea</h3>
+                <form action="/edit/{{task._id}}" method="POST">
+                    <input type="text" name="title" placeholder="Titulo tarea" value="{{task.title}}"
+                        class="form-control rounded-0 bg-dark text-white">
+            </div>
+                    <div class="mb-3">
+                        <textarea name="description" rows="3" class="form-control rounded-0 bg-dark text-white"
+                        placeholder="Agrega una descripción">{{task.description}}</textarea>
+                    </div>     
+                    <button class="btn btn-primary border-dark">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+
+
+
+    
+
+
