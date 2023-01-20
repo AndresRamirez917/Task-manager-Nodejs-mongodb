@@ -26,5 +26,7 @@ app.use(indexRoutes);
 // STATIC FILES
 app.use(express.static(path.join(__dirname, "public")))
 
+// COMENTARIO DE PRUEBA
+
 export default app;
 
