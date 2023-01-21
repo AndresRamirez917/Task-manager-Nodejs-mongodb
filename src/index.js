@@ -5,7 +5,7 @@
  * POR EL USO OBSOLETO DE UNA FUNCIÓN EN MONGOOSE
  */
 
-
+//require('dotenv').config();
 import app from "./app";
 import exphbs from "express-handlebars";
 import "./database"
